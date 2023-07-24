@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://todo-node-l2kkez8h2-idrodrigo.vercel.app/api",
+  baseURL: "https://todo-node-red.vercel.app/",
   withCredentials: true,
 });
 
