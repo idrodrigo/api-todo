@@ -8,7 +8,7 @@ import todosRoutes from './routes/todo.routes.js'
 const server = express()
 
 server.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://todo-node-vnbn.vercel.app/',
   credentials: true
 }))
 server.use(express.json())
