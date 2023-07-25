@@ -4,6 +4,13 @@
             {
                   "src": "index.js",
                   "use": "@vercel/node"
+            },
+            {
+                  "src": "client/package.json",
+                  "use": "@vercel/static-build",
+                  "config": {
+                        "buildCommand": "npm install && npm run build"
+                  }
             }
       ],
       "routes": [
