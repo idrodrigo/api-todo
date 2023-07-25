@@ -29,10 +29,10 @@ export const register = async (req, res) => {
       id: userSaved._id
     })
     res.cookie('token', token, {
-      // httpOnly: process.env.NODE_ENV !== 'development',
-      // secure: true,
-      // sameSite: 'none',
-      // maxAge: 24 * 60 * 60 * 1000 // 1 day
+      httpOnly: process.env.NODE_ENV !== 'development',
+      secure: true,
+      sameSite: 'none',
+      maxAge: 24 * 60 * 60 * 1000 // 1 day
     })
     res.json({
       id: userSaved._id,
@@ -60,10 +60,10 @@ export const login = async (req, res) => {
       id: userFound._id
     })
     res.cookie('token', token, {
-      // httpOnly: process.env.NODE_ENV !== 'development',
-      // secure: true,
-      // sameSite: 'none',
-      // maxAge: 24 * 60 * 60 * 1000 // 1 day
+      httpOnly: process.env.NODE_ENV !== 'development',
+      secure: true,
+      sameSite: 'none',
+      maxAge: 24 * 60 * 60 * 1000 // 1 day
     })
     res.json({
       id: userFound._id,
