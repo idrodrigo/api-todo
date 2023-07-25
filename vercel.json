@@ -14,5 +14,8 @@
       ],
       "env": {
             "NODE_ENV": "production"
+      },
+      "envBuild": {
+            "BUILD_ENv": "npm run build"
       }
 }
