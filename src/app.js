@@ -5,8 +5,6 @@ import cors from 'cors'
 import authRoutes from './routes/auth.routes.js'
 import todosRoutes from './routes/todo.routes.js'
 
-import { FRONTEND_URL } from './config.js'
-
 const server = express()
 
 server.use(cors({
@@ -19,7 +17,7 @@ server.use(morgan('dev'))
 server.use('/api', authRoutes)
 server.use('/api', todosRoutes)
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'production') {
   const path = await import('path')
   server.use(express.static('client/dist'))
 
