@@ -13,6 +13,12 @@
                   "use": "@vercel/node"
             }
       ],
+      "routes": [
+            {
+                  "src": "/(.*)",
+                  "dest": "/"
+            }
+      ],
       "env": {
             "NODE_ENV": "production"
       }
