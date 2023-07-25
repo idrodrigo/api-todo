@@ -41,9 +41,9 @@ function TodoFormPage() {
       }
     } catch (error) {
       console.log(error)
+    } finally {
+      navigate('/todo')
     }
-
-    navigate('/todo')
   }
 
   return (
