@@ -10,7 +10,7 @@ import { FRONTEND_URL } from './config.js'
 const server = express()
 
 server.use(cors({
-  origin: FRONTEND_URL,
+  origin: '*',
   credentials: true
 }))
 server.use(express.json())
@@ -19,7 +19,7 @@ server.use(morgan('dev'))
 server.use('/api', authRoutes)
 server.use('/api', todosRoutes)
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'development') {
   const path = await import('path')
   server.use(express.static('client/dist'))
 
