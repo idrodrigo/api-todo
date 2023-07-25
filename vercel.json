@@ -9,8 +9,11 @@
                   }
             },
             {
-                  "src": "index.js",
-                  "use": "@vercel/node"
+                  "src": "/",
+                  "use": "@vercel/node",
+                  "config": {
+                        "buildCommand": "npm run start"
+                  }
             }
       ],
       "routes": [
