@@ -35,9 +35,9 @@ function TodoFormPage() {
 
     try {
       if (id) {
-        updateTodo(id, {...data, date})
+        await updateTodo(id, {...data, date})
       } else {
-        createTodo({...data, date})
+        await createTodo({...data, date})
       }
     } catch (error) {
       console.log(error)
