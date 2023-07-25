@@ -11,21 +11,18 @@ function TodoPage() {
     return () => setTodos([])
   }, [])
 
-  if(todos.length === 0) return (
-    <div>
-      <h1>No todos</h1>
-    </div>
-  )
-
-  
   return (
-    <div  className="grid md:grid-cols-3 sm:grid-cols-2 gap-2">
+    todos.length > 0 
+    ? <div  className="grid md:grid-cols-3 sm:grid-cols-2 gap-2">
       {
         todos.map((todo) => (
           <TodoCard key={todo._id} todo={todo} />
         ))
 
       }
+    </div>
+    : <div> 
+      <h1>No todos</h1>
     </div>
   )
 }
