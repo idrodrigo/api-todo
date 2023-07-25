@@ -17,14 +17,12 @@ server.use(morgan('dev'))
 server.use('/api', authRoutes)
 server.use('/api', todosRoutes)
 
-if (process.env.NODE_ENV === 'production') {
-  const path = await import('path')
-  server.use(express.static('client/dist'))
+const path = await import('path')
+server.use(express.static('client/dist'))
 
-  server.get('*', (_, res) => {
-    console.log(path.resolve('client', 'dist', 'index.html'))
-    res.sendFile(path.resolve('client', 'dist', 'index.html'))
-  })
-}
+server.get('*', (_, res) => {
+  console.log(path.resolve('client', 'dist', 'index.html'))
+  res.sendFile(path.resolve('client', 'dist', 'index.html'))
+})
 
 export default server
