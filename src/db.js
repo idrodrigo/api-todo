@@ -1,8 +1,6 @@
 // i2KpACPmpKYaQFss
 import mongoose from 'mongoose'
-
-const PASSWORD = 'i2KpACPmpKYaQFss'
-const MONGOOSEDB_URI = `mongodb+srv://idrodrigo:${PASSWORD}@todo.4kf1rcq.mongodb.net/?retryWrites=true&w=majority`
+import { MONGOOSEDB_URI } from './config.js'
 
 export const connectDB = async () => {
   try {
